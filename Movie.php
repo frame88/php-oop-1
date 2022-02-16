@@ -39,23 +39,44 @@ class Movie {
 $film = new Movie('Titanic','1829','scandinavo');
 
 //creazione delle successive skill (non incluse nel construct)
-// $film -> title = 'titanic';
+$film -> title = 'titanic';
 // var_dump($film);
-var_dump($film);
+// var_dump($film);
 
 $film_2 = new Movie('Jurassic Park','1997','inglese(USA)');
 
 //creazione delle successive skill (non incluse nel construct)
-// $film_2 -> title = 'jurassic park';
-// $film_2 -> durata = '120';
-// $film_2 -> language = 'english';
+$film_2 -> title = 'jurassic park';
+$film_2 -> durata = '120';
+$film_2 -> language = 'english';
 // var_dump($film_2);
 
 $film_3 = new Movie('Narnia','2003','elfico');
 
 //creazione delle successive skill (non incluse nel construct)
-// $film_3 -> title = 'narnia';
-// $film_3 -> durata = '116';
+$film_3 -> title = 'narnia';
+$film_3 -> durata = '116';
 // var_dump($film_3);
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>php-oop-1</title>
+</head>
+<body>
+    <div class="container">
+        <h1>I film che ti consigliamo questa settimana sono:</h1>
+        <p><?php echo $film -> getInfo() ?></p>
+        <hr>
+        <p><?php echo $film_2 -> getInfo() ?></p>
+        <hr>
+        <p><?php echo $film_3 -> getInfo() ?></p>
+    </div>
+</body>
+</html>
