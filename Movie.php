@@ -28,9 +28,14 @@ class Movie {
     }
 
     //creazione di un metodo
-    public function getInfo() 
+    public function setInfo($title) 
     {
-        return $this -> $title . $this -> $director . $this -> $language;
+        $this -> title = $title;
+    }
+
+    public function getInfo()
+    {
+        return $this -> title;
     }
 
 }
