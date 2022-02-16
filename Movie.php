@@ -35,7 +35,7 @@ class Movie {
 
     public function getInfo()
     {
-        return $this -> title;
+        return $this -> title . ' ' . $this -> director .  ' ' . $this -> language;
     }
 
 }
@@ -45,6 +45,7 @@ $film = new Movie('Titanic','1829','scandinavo');
 
 //creazione delle successive skill (non incluse nel construct)
 $film -> title = 'titanic';
+$film -> director = 'Cameroon';
 // var_dump($film);
 // var_dump($film);
 
@@ -54,6 +55,7 @@ $film_2 = new Movie('Jurassic Park','1997','inglese(USA)');
 $film_2 -> title = 'jurassic park';
 $film_2 -> durata = '120';
 $film_2 -> language = 'english';
+$film_2 -> director = 'Spielberg';
 // var_dump($film_2);
 
 $film_3 = new Movie('Narnia','2003','elfico');
@@ -61,6 +63,8 @@ $film_3 = new Movie('Narnia','2003','elfico');
 //creazione delle successive skill (non incluse nel construct)
 $film_3 -> title = 'narnia';
 $film_3 -> durata = '116';
+$film_3 -> director = 'Remo La barca';
+
 // var_dump($film_3);
 
 ?>
