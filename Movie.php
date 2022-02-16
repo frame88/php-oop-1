@@ -14,24 +14,48 @@ relative proprietà -->
 class Movie {
     public $title;
     public $durata;
-    public $lingua;
-    public $regista;
-    public $anno;
+    public $language;
+    public $director;
+    public $year;
+
+
+    //creazione di un costruttote che necessita 3 attributi
+    public function __construct($title, $year, $language)
+    {
+        $this->title = $title;
+        $this->year = $year;
+        $this->language = $language;
+    }
+
+    //creazione di un metodo
+    public function getInfo() 
+    {
+        return $this -> $title . $this -> $director . $this -> $language;
+    }
+
 }
 
-$film = new Movie();
-$film -> title = 'titanic';
+//creazione di tre oggetti Movie con relativi attributi
+$film = new Movie('Titanic','1829','scandinavo');
+
+//creazione delle successive skill (non incluse nel construct)
+// $film -> title = 'titanic';
+// var_dump($film);
 var_dump($film);
 
-$film_2 = new Movie();
-$film_2 -> title = 'jurassic park';
-$film_2 -> durata = '120';
-$film_2 -> lingua = 'english';
-var_dump($film_2);
+$film_2 = new Movie('Jurassic Park','1997','inglese(USA)');
 
-$film_3 = new Movie();
-$film_3 -> title = 'narnia';
-$film_3 -> durata = '116';
-var_dump($film_3);
+//creazione delle successive skill (non incluse nel construct)
+// $film_2 -> title = 'jurassic park';
+// $film_2 -> durata = '120';
+// $film_2 -> language = 'english';
+// var_dump($film_2);
+
+$film_3 = new Movie('Narnia','2003','elfico');
+
+//creazione delle successive skill (non incluse nel construct)
+// $film_3 -> title = 'narnia';
+// $film_3 -> durata = '116';
+// var_dump($film_3);
 
 ?>
