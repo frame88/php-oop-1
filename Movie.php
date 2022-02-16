@@ -72,10 +72,13 @@ $film_3 -> durata = '116';
 <body>
     <div class="container">
         <h1>I film che ti consigliamo questa settimana sono:</h1>
+        <h2>numero 1 </h2>
         <p><?php echo $film -> getInfo() ?></p>
         <hr>
+        <h2>numero 2</h2>
         <p><?php echo $film_2 -> getInfo() ?></p>
         <hr>
+        <h2>numero 3</h2>
         <p><?php echo $film_3 -> getInfo() ?></p>
     </div>
 </body>
